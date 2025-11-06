@@ -1,0 +1,414 @@
+:root{
+    --bg-color: #FFF6E6;
+    --primary-color: #7D2501;
+    --text-color: #2C2C2C;
+    --pink: #FF7286;
+    --darkpink: #FD5F76;
+    --green: #A7C042;
+    --darkgreen: #99B527;
+    --yellow: #FF9F23;
+    --darkyellow: #F58F0B;
+    --heading-font: "Pacifico", cursive;
+    --body-font: "Poppins", sans-serif;
+}
+
+/* global properties */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--body-font);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+}
+
+/* header */
+
+header{
+    max-width: 1600px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 2.5rem;
+}
+
+.logo{
+    max-width: 152px;
+}
+
+nav{
+    background-color: #fff;
+    border-radius: 3rem;
+    padding: 0.5rem;
+    box-shadow: 0 4px 8px #7D250110;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav ul a{
+    color: var(--text-color);
+    display: inline-block;
+    border-radius: 2rem;
+    text-decoration: none;
+    padding: 0.5rem 1.4rem;
+}
+
+nav ul a:hover{
+    background-color: #7D250110;
+}
+
+nav ul a.active{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.menu-icons{
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.menu-icons a:hover svg{
+    fill: var(--primary-color);
+}
+
+.menu-icons a:hover svg path{
+    stroke: #fff;
+}
+
+/* header end */
+
+/* hero section */
+
+.hero-wrapper{
+    max-width: 1600px;
+    margin: auto;
+    min-height: calc(100vh - 100px);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-wrapper h1{
+    display: inline-flex;
+    flex-direction: column;
+    font-family: var(--heading-font);
+    font-weight: 400;
+    line-height: 0.75;
+    margin-bottom: 20rem;
+}
+
+.hero-wrapper h1 .fill-text{
+    color: var(--primary-color);
+    font-size: clamp(5rem, 8.4vw, 10rem);
+    display: inline-block;
+    margin-left: 2.5rem;
+}
+
+.hero-wrapper h1 .strok-text{
+    font-size: clamp(7rem, 10.4vw, 12.5rem);
+    color: var(--bg-color);
+    position: relative;
+    text-shadow: 0 8px 0 var(--primary-color);
+}
+
+.hero-wrapper h1 .strok-text::before{
+    content: 'Happiness';
+    position: absolute;
+    color: var(--primary-color);
+    left: -2px;
+    top: -2px;
+    z-index: -1;
+}
+
+.hero-wrapper h1 .strok-text::after{
+    content: 'Happiness';
+    position: absolute;
+    color: var(--primary-color);
+    left: 3px;
+    bottom: 2px;
+    z-index: -1;
+}
+
+.hero-wrapper .scoops{
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+}
+
+.hero-wrapper .floating-img{
+    position: absolute;
+}
+
+.hero-wrapper .img1 {
+    max-width: 5.6vw;
+    top: 15%;
+    right: 28%;
+}
+
+.hero-wrapper .img2 {
+    max-width: 9vw;
+    left: 7%;
+    top: 44%;
+}
+
+.hero-wrapper .img3 {
+    max-width: 8vw;
+    right: 8%;
+    top: 54%;
+}
+
+/* product sections */
+
+.product-wrapper{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 2.5rem;
+    position: relative;
+}
+
+.strawberry-product{
+    background-color: var(--pink);
+}
+
+.strawberry-product svg path{
+    fill: var(--darkpink);
+}
+
+.pistachio-product{
+    background-color: var(--green);
+}
+
+.pistachio-product svg path{
+    fill: var(--darkgreen);
+}
+
+.caramel-product{
+    background-color: var(--yellow);
+}
+
+.caramel-product svg path{
+    fill: var(--darkyellow);
+}
+
+.product-wrapper .shape{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+    display: flex;
+    align-items: end;
+}
+
+.product-wrapper .content-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1600px;
+    margin: auto;
+    color: #fff;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.product-wrapper .img-wrapper{
+    flex-basis: 65%;
+    text-align: center;
+    position: relative;
+}
+
+.product-wrapper .img-wrapper .product-img{
+    transform: rotate(30deg);
+    margin-right: 8rem;
+    position: relative;
+    z-index: 2;
+    max-width: 21vw;
+    width: 100%;
+}
+
+.product-wrapper .product-slices{
+    position: absolute;
+    left: 15%;
+    bottom: 10%;
+    z-index: 1;
+    max-width: 28vw;
+}
+
+.product-wrapper .content{
+    flex-basis: 35%;
+    min-width: 400px;
+}
+
+.product-wrapper .content .title{
+    font-family: var(--heading-font);
+    font-weight: 400;
+    font-size: clamp(3rem, 5vw, 5.5rem);
+    line-height: 1.15;
+}
+
+.product-wrapper .content .desc{
+    font-size: 1.4rem;
+    line-height: 1.5;
+    margin: 1.5rem 0 2rem;
+}
+
+.product-wrapper .btn{
+    background-color: #fff;
+    color: var(--text-color);
+    display: inline-block;
+    border-radius: 3rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+    padding: 0.5rem 1.8rem;
+    text-decoration: none;
+}
+
+.strawberry-product .btn:hover{
+    box-shadow: 2px 4px var(--darkpink);
+    color: var(--darkpink);
+}
+
+.pistachio-product .btn:hover{
+    box-shadow: 2px 4px var(--darkgreen);
+    color: var(--darkgreen);
+}
+
+.caramel-product .btn:hover{
+    box-shadow: 2px 4px var(--darkyellow);
+    color: var(--darkyellow);
+}
+
+/* text sectoin */
+
+.text-wrapper{
+    max-width: 1600px;
+    margin: auto;
+    padding: 8rem 2.5rem;
+}
+
+.text-wrapper .text{
+    font-family: var(--heading-font);
+    font-size: 4rem;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--bg-color);
+    text-shadow: 0 5px 0 var(--primary-color);
+    position: relative;
+}
+
+.text-wrapper .text::before{
+    content: 'From creamy scoops to crunchy swirls, every bite of Creamio is crafted to turn simple moments into sweet memories — taste the joy, share the love.';
+    position: absolute;
+    color: var(--primary-color);
+    left: -3px;
+    top: -2px;
+    z-index: -1;
+}
+
+.text-wrapper .text::after{
+    content: 'From creamy scoops to crunchy swirls, every bite of Creamio is crafted to turn simple moments into sweet memories — taste the joy, share the love.';
+    position: absolute;
+    color: var(--primary-color);
+    left: 4px;
+    bottom: 2px;
+    z-index: -1;
+}
+
+/* footer */
+
+footer{
+    color: #fff;
+    position: relative;
+}
+
+footer .shape{
+    display: flex;
+    align-items: end;
+    margin-bottom: -2px;
+}
+
+.main-row{
+    background-color: var(--primary-color);
+}
+
+footer .row{
+    max-width: 1600px;
+    margin: auto;
+    padding: 4rem 2.5rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 0.5fr;
+}
+
+footer .row .tagline{
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+footer .menu-title{
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+footer .row ul{
+    list-style-type: none;
+}
+
+footer .row ul span{
+    margin-right: 0.5rem;
+}
+
+footer .row ul a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    margin: 0.5rem 0;
+}
+
+footer .social-links{
+    display: flex;
+    gap: 1.2rem;
+}
+
+footer .social-links a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+footer a:hover{
+    opacity: 0.7;
+}
+
+.copyright{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 2rem;
+    border-top: 1px solid #ffffff9b;
+    max-width: 1600px;
+    margin: auto;
+}
